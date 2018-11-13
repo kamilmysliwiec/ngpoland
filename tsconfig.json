@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@ngpoland/shared": [
+        "libs/shared/src/index.ts"
+      ]
     }
   },
   "exclude": [
