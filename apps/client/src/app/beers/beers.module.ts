@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { AddBeerComponent } from './add-beer/add-beer.component';
@@ -8,7 +9,13 @@ import { BeerListComponent } from './beer-list/beer-list.component';
 import { beersRoutes } from './beers.routes';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(beersRoutes), SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(beersRoutes),
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
+  ],
   declarations: [BeerListComponent, BeerListItemComponent, AddBeerComponent]
 })
 export class BeersModule {}
