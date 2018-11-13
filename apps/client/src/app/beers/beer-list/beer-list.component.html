@@ -1,7 +1,9 @@
-<mat-card class="container">
-  <mat-list *ngIf="(beers$ | async) as beers">
-    <mat-list-item *ngFor="let item of beers">
-      <ngpoland-beer-list-item [item]="item"></ngpoland-beer-list-item>
-    </mat-list-item>
-  </mat-list>
-</mat-card>
+<mat-list *ngIf="(beers$ | async) as beers">
+  <mat-list-item *ngFor="let item of beers">
+    <ngpoland-beer-list-item
+      [item]="item"
+      class="item"
+    ></ngpoland-beer-list-item>
+  </mat-list-item>
+</mat-list>
+<ngpoland-add-beer></ngpoland-add-beer>

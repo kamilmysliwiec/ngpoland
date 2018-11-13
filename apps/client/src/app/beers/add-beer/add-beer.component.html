@@ -1,0 +1,24 @@
+<div class="form-wrapper">
+  <h3>Add beer</h3>
+  <form class="row">
+    <mat-form-field class="col-6">
+      <input matInput placeholder="Name" />
+    </mat-form-field>
+
+    <mat-form-field class="col-6">
+      <input matInput placeholder="Rating" type="number" min="0" max="10" />
+    </mat-form-field>
+
+    <mat-form-field class="col-12">
+      <mat-select placeholder="Category">
+        <mat-option>Porter</mat-option>
+        <mat-option>Lager</mat-option>
+        <mat-option>Bock</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="col-12">
+      <button mat-raised-button color="primary" class="width-100">Add</button>
+    </div>
+  </form>
+</div>

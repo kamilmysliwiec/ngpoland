@@ -11,6 +11,11 @@ export class BeersService {
       id: 1,
       name: 'Kozel',
       category: 'Lager'
+    },
+    {
+      id: 2,
+      name: 'Komes',
+      category: 'Porter'
     }
   ];
   constructor() {}

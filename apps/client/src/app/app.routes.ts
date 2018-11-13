@@ -7,6 +7,10 @@ export const appRoutes: Route[] = [
     loadChildren: './beers/beers.module#BeersModule'
   },
   {
+    path: 'login',
+    loadChildren: './login/login.module#LoginModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
