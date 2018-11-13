@@ -1,4 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Beer } from '@ngpoland/shared';
+import { Observable } from 'rxjs';
+import { BeersService } from '../beers.service';
 
 @Component({
   selector: 'ngpoland-beer-list',
@@ -7,7 +10,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BeerListComponent implements OnInit {
-  constructor() {}
+  beers$: Observable<Beer[]> = this.beersService.findAll();
+
+  constructor(private readonly beersService: BeersService) {}
 
   ngOnInit() {}
 }
