@@ -13,7 +13,7 @@
       "root": "apps/client/",
       "sourceRoot": "apps/client/src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ngpoland",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss",
