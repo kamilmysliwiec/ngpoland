@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 import { Beer } from '@ngpoland/shared';
 
 @Component({
@@ -9,4 +15,5 @@ import { Beer } from '@ngpoland/shared';
 })
 export class BeerListItemComponent {
   @Input() item: Beer;
+  @Output() removeBeer = new EventEmitter();
 }

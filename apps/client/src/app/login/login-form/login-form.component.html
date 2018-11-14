@@ -1,16 +1,28 @@
 <div class="form-wrapper">
   <h3>Sign in</h3>
-  <form class="row">
+  <form class="row" [formGroup]="loginForm">
     <mat-form-field class="col-12">
-      <input matInput placeholder="Email" />
+      <input matInput placeholder="Email" formControlName="email" />
     </mat-form-field>
 
     <mat-form-field class="col-12">
-      <input matInput placeholder="Password" type="password" />
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+      />
     </mat-form-field>
 
     <div class="col-12">
-      <button mat-raised-button color="primary" class="width-100">Add</button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="width-100"
+        [disabled]="loginForm.invalid && loginForm.touched"
+      >
+        Sign In
+      </button>
     </div>
   </form>
 </div>

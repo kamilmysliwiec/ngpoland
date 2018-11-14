@@ -2,5 +2,12 @@
   <span class="rating">{{ item.rating }}</span>
   <p>{{ item.name }}</p>
   <span class="category">{{ item.category }}</span>
-  <button mat-raised-button color="primary" class="align-right">Delete</button>
+  <button
+    mat-raised-button
+    color="primary"
+    class="align-right"
+    (click)="removeBeer.emit(item.id)"
+  >
+    Delete
+  </button>
 </div>

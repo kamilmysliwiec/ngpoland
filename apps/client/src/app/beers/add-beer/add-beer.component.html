@@ -1,24 +1,39 @@
 <div class="form-wrapper">
   <h3>Add beer</h3>
-  <form class="row">
+  <form class="row" [formGroup]="addBeerForm">
     <mat-form-field class="col-6">
-      <input matInput placeholder="Name" />
+      <input matInput placeholder="Name" formControlName="name" />
     </mat-form-field>
 
     <mat-form-field class="col-6">
-      <input matInput placeholder="Rating" type="number" min="0" max="10" />
+      <input
+        matInput
+        placeholder="Rating"
+        type="number"
+        min="0"
+        max="10"
+        formControlName="rating"
+      />
     </mat-form-field>
 
     <mat-form-field class="col-12">
-      <mat-select placeholder="Category">
-        <mat-option>Porter</mat-option>
-        <mat-option>Lager</mat-option>
-        <mat-option>Bock</mat-option>
+      <mat-select placeholder="Category" formControlName="category">
+        <mat-option value="Porter">Porter</mat-option>
+        <mat-option value="Lager">Lager</mat-option>
+        <mat-option value="Bock">Bock</mat-option>
       </mat-select>
     </mat-form-field>
 
     <div class="col-12">
-      <button mat-raised-button color="primary" class="width-100">Add</button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="width-100"
+        [disabled]="addBeerForm.invalid && addBeerForm.touched"
+        (click)="onSubmit()"
+      >
+        Add
+      </button>
     </div>
   </form>
 </div>
